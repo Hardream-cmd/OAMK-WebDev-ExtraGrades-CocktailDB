@@ -46,6 +46,7 @@ body {
 
 .result {
   text-align: center;
+  margin-bottom: 5em;
 }
 
 .main-card {
@@ -71,6 +72,7 @@ body {
 .main-title {
   font-size: 1rem;
   text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .main-ing {
