@@ -1,4 +1,4 @@
-import React, { Component, component } from "react";
+import React, { Component } from "react";
 
 class App extends Component {
   constructor(props) {
@@ -12,31 +12,26 @@ class App extends Component {
     const letter = e.target.value;
     const url =
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=` + letter;
+
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.setState({ cocktails: data }));
   };
   submithandler = (e) => {
     e.preventDefault();
-    
   };
   result = () => {
     const data = this.state.cocktails.drinks;
     if (data) {
       return data.map((cocktail) => (
         <div className="main-card" key={cocktail.idDrink}>
-          <img
-            src={cocktail.strDrinkThumb}
-            alt="cocktails"
-            height="200"
-            width="200"
-          />
+          <img src={cocktail.strDrinkThumb} alt="cocktails" />
           <br />
           <h2 className="main-title">{cocktail.strDrink}</h2>
+          <h4>Main Ingredients:</h4>
           <p className="main-ing">
-            Ingredients:
-            {cocktail.strIngredient1},{cocktail.strIngredient2},
-            {cocktail.strIngredient3},
+            {cocktail.strIngredient1},&nbsp;{cocktail.strIngredient2},&nbsp;
+            {cocktail.strIngredient3}
           </p>
         </div>
       ));
@@ -45,20 +40,21 @@ class App extends Component {
   render() {
     return (
       <>
+        <h1 className="page-title">The Cocktail Search Engine</h1>
         <div className="main-container">
           <form onSubmit={this.submithandler}>
             <div className="search-container">
               <input
                 type="search"
                 className="search-field"
+                placeholder="Search by first letter"
                 onChange={this.changehandler}
               />
-              <br />
-              <button className="submit-btn">SEARCH COCKTAILS</button>
             </div>
           </form>
         </div>
-        {this.result()}
+        <div className="result">{this.result()}</div>
+        <footer>- Arnaud Durand -</footer>
       </>
     );
   }
