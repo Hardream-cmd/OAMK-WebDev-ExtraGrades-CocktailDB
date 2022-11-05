@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# READ ME :
 
 - I am using TheCocktailDB : https://www.thecocktaildb.com/api.php
 - About the API KEY : "API Methods using the developer test key '1' as the API key"
