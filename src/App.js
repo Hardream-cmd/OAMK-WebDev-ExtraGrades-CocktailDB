@@ -5,7 +5,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    // declaring an array that will store all the cocktails from the API fetch
+    // declaring an array that will store the cocktails from the API fetch
     this.state = {
       cocktails: [],
     };
@@ -49,7 +49,7 @@ class App extends Component {
       ));
     }
   };
-  // here is rendered the static elements of the page + the result of the search
+  // here is rendered the static elements of the page and the result of the search
   render() {
     return (
       <>
@@ -61,7 +61,7 @@ class App extends Component {
                 type="search"
                 className="search-field"
                 placeholder="Search by first letter"
-                // call changehandler when the input changes
+                // call changehandler to fetch the data when the input changes
                 onChange={this.changehandler}
               />
             </div>
