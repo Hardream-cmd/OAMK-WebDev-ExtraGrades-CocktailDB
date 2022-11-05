@@ -20,6 +20,7 @@ class App extends Component {
   submithandler = (e) => {
     e.preventDefault();
   };
+  
   result = () => {
     const data = this.state.cocktails.drinks;
     if (data) {
