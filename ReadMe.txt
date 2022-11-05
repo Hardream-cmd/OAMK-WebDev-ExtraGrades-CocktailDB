@@ -1,1 +1,0 @@
-There are no cocktails whose name begins with the letter : U and X

@@ -1,5 +1,12 @@
 # Getting Started with Create React App
 
+- I am using TheCocktailDB : https://www.thecocktaildb.com/api.php
+- About the API KEY : "API Methods using the developer test key '1' as the API key"
+- It displays all the cocktails whose name begins with the first letter typed by the user.
+- There are no cocktails whose name begins with the letter : U and X, it is not a bug, it is the database.
+
+Arnaud Durand
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
